@@ -1,9 +1,9 @@
-package model;
+package org.example.hardwarepricetracker.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Product {
@@ -26,5 +26,7 @@ public class Product {
         return name;
     }
 
+    @OneToMany(mappedBy = "product_id",  cascade = CascadeType.ALL, orphanRemoval = true)
+    List<ProductOffer> offers =  new ArrayList<>();
 
 }

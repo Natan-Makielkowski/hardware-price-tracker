@@ -1,4 +1,4 @@
-package model;
+package org.example.hardwarepricetracker.model;
 
 import jakarta.persistence.*;
 
@@ -18,6 +18,10 @@ public class ProductOffer {
         this.url = url;
         this.priceSelector = priceSelector;
     }
+
+    @ManyToOne
+    @JoinColumn(name = "product_id")
+    private Product product;
 
 
 
