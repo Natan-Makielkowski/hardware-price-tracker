@@ -19,12 +19,6 @@ public class Product {
         this.name = name;
 
     }
-    public Integer getId() {
-        return id;
-    }
-    public String getName() {
-        return name;
-    }
 
     @OneToMany(mappedBy = "product_id",  cascade = CascadeType.ALL, orphanRemoval = true)
     List<ProductOffer> offers =  new ArrayList<>();
