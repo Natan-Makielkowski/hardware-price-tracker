@@ -1,13 +1,16 @@
 package org.example.hardwarepricetracker.model;
 
 import jakarta.persistence.*;
+import lombok.AccessLevel;
 import lombok.Getter;
+import lombok.Setter;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
 @Getter
+@Setter
 public class Product {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
@@ -23,7 +26,7 @@ public class Product {
         this.category = category;
 
     }
-
+    @Setter(AccessLevel.NONE)
     @OneToMany(mappedBy = "product",  cascade = CascadeType.ALL, orphanRemoval = true)
     private final List<ProductOffer> offers =  new ArrayList<>();
 
