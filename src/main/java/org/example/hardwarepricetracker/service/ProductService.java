@@ -23,7 +23,7 @@ public class ProductService {
         return productRepository.findAll().stream().map(this::mapToResponseDto).toList();
     }
 
-    public Optional<ProductResponseDto> getProductById(int id) {
+    public Optional<ProductResponseDto> getProductById(Integer id) {
         return productRepository.findById(id).map(this::mapToResponseDto);
     }
 
