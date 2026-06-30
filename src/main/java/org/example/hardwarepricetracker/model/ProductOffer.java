@@ -33,7 +33,7 @@ public class ProductOffer {
 
 
 
-    @OneToMany(mappedBy = "product_offer_id", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "productOffer", cascade = CascadeType.ALL, orphanRemoval = true)
     private final List<PriceSnapshot> priceSnapshots = new ArrayList<>();
 
 

@@ -24,7 +24,7 @@ public class Product {
 
     }
 
-    @OneToMany(mappedBy = "product_id",  cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "product",  cascade = CascadeType.ALL, orphanRemoval = true)
     private final List<ProductOffer> offers =  new ArrayList<>();
 
 
