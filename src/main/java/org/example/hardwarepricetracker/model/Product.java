@@ -11,12 +11,14 @@ public class Product {
     @Id
     private Integer id;
     private String name;
+    private Category category;
 
 
     Product() {}
 
-    Product(String name, String url, String CssSelector) {
+    Product(String name, Category category) {
         this.name = name;
+        this.category = category;
 
     }
 
