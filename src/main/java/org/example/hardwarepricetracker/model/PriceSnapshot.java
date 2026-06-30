@@ -15,7 +15,7 @@ public class PriceSnapshot {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    private int theReadPrice;
+    private double theReadPrice;
     private LocalDateTime priceDateTime;
 
     @ManyToOne

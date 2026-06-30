@@ -1,5 +1,6 @@
 package org.example.hardwarepricetracker.model;
 
+
 public enum Category {
     CPU,
     GPU,

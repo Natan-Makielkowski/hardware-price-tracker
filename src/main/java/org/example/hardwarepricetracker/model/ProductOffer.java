@@ -18,15 +18,15 @@ public class ProductOffer {
     private String storeName;
     private String url;
     private String priceSelector;
-    private boolean isActive;
+    private boolean active;
 
     public ProductOffer() {}
-    public ProductOffer(Product product, String storeName, String url, String priceSelector, boolean isActive) {
+    public ProductOffer(Product product, String storeName, String url, String priceSelector, boolean active) {
         this.product =  product;
         this.storeName = storeName;
         this.url = url;
         this.priceSelector = priceSelector;
-        this.isActive = isActive;
+        this.active = active;
     }
 
     @ManyToOne

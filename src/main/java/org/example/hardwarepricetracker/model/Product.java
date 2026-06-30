@@ -16,6 +16,7 @@ public class Product {
     @Id
     private Integer id;
     private String name;
+    @Enumerated(EnumType.STRING)
     private Category category;
 
 
