@@ -3,6 +3,9 @@ package org.example.hardwarepricetracker.model;
 import jakarta.persistence.*;
 import lombok.Getter;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 @Getter
 public class ProductOffer {
@@ -15,8 +18,9 @@ public class ProductOffer {
     private String priceSelector;
     private boolean isActive;
 
-    ProductOffer() {}
-    public ProductOffer(String storeName, String url, String priceSelector, boolean isActive) {
+    public ProductOffer() {}
+    public ProductOffer(Product product, String storeName, String url, String priceSelector, boolean isActive) {
+        this.product =  product;
         this.storeName = storeName;
         this.url = url;
         this.priceSelector = priceSelector;
@@ -26,6 +30,11 @@ public class ProductOffer {
     @ManyToOne
     @JoinColumn(name = "product_id")
     private Product product;
+
+
+
+    @OneToMany(mappedBy = "product_offer_id", cascade = CascadeType.ALL, orphanRemoval = true)
+    private final List<PriceSnapshot> priceSnapshots = new ArrayList<>();
 
 
 
