@@ -25,7 +25,7 @@ public class PriceSnapshot {
 
     public PriceSnapshot() {}
 
-    public PriceSnapshot(int theReadPrice, LocalDateTime priceDateTime, ProductOffer productOffer) {
+    public PriceSnapshot(double theReadPrice, LocalDateTime priceDateTime, ProductOffer productOffer) {
         this.theReadPrice = theReadPrice;
         this.priceDateTime = priceDateTime;
         this.productOffer = productOffer;
