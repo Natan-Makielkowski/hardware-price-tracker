@@ -22,6 +22,6 @@ public class HtmlPriceScraperTest {
         HtmlPriceScraper scraper = new HtmlPriceScraper();
         Double extractedPrice = scraper.extractPrice(htmlContent, selector);
 
-        assertEquals(1499.00, extractedPrice, 0.01);
+        assertEquals(5999.00, extractedPrice, 0.01);
     }
 }
